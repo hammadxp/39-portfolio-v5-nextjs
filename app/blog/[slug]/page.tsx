@@ -7,9 +7,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 type BlogPageProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -19,7 +17,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  const { slug } = await params;
+
+  let post = await getPost(slug);
 
   let { title, publishedAt: publishedTime, summary: description, image } = post.metadata;
   let ogImage = image ? `${data.url}${image}` : `${data.url}/og?title=${title}`;
@@ -49,7 +49,9 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  let post = await getPost(params.slug);
+  const { slug } = await params;
+
+  let post = await getPost(slug);
 
   if (!post) {
     notFound();
