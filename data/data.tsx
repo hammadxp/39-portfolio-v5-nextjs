@@ -114,7 +114,7 @@ export const data = {
     },
     {
       title: "LearnWithAsad",
-      href: "https://magicui.design",
+      href: "https://learnwithasad.co",
       dates: "June 2024 - May 2025",
       active: true,
       description:
@@ -123,7 +123,7 @@ export const data = {
       links: [
         {
           type: "Website",
-          href: "https://learnwithasad.co/",
+          href: "https://learnwithasad.co",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -137,7 +137,7 @@ export const data = {
     },
     {
       title: "Infuse",
-      href: "https://automatic.chat",
+      href: "https://github.com/hammadxp/infuse-backend",
       dates: "August 2023 - August 2023",
       active: true,
       description:
