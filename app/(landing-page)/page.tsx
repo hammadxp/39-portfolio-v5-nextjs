@@ -20,6 +20,7 @@ export default function LandingPage() {
       <WorkSection />
       <EducationSection />
       <SkillsSection />
+      <ServicesSection />
       <ProjectsSection />
       <MiniToolsSection />
       <ContactSection />
@@ -129,6 +130,28 @@ function SkillsSection() {
           {data.skills.map((skill, id) => (
             <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
               <Badge key={skill}>{skill}</Badge>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+}
+
+function ServicesSection() {
+  return (
+    <SectionWrapper id="services">
+      <div className="flex min-h-0 flex-col gap-y-3">
+        <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <h2 className="text-xl font-bold">Services</h2>
+          <p className="text-sm mt-1">I&apos;ve worked on implementing different kinds of features, below are some of them:</p>
+        </BlurFade>
+        <div className="flex flex-wrap gap-1">
+          {data.services.map((service, id) => (
+            <BlurFade key={service} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <Badge variant="outline" className="bg-background" key={service}>
+                {service}
+              </Badge>
             </BlurFade>
           ))}
         </div>
@@ -254,7 +277,10 @@ function ContactSection() {
               <Link href={data.contact.social.X.url} className="text-blue-500 hover:underline">
                 with a direct question on twitter
               </Link>{" "}
-              and I&apos;ll respond whenever I can. I will ignore all soliciting.
+              and I&apos;ll respond whenever I can. Or you can just send me an{" "}
+              <Link href={`mailto:${data.contact.email}`} className="text-blue-500 hover:underline">
+                email.
+              </Link>
             </p>
           </div>
         </BlurFade>

@@ -7,5 +7,5 @@ export function PageWrapper({ children, className }: BaseProps) {
 }
 
 export function SectionWrapper({ children, className }: BaseProps & HTMLAttributes<HTMLElement>) {
-  return <section className={cn("max-w-2xl mx-auto", className)}>{children}</section>;
+  return <section className={cn("max-w-2xl mx-auto w-full", className)}>{children}</section>;
 }
