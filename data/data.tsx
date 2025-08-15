@@ -9,7 +9,7 @@ export const data = {
   locationLink: "https://www.google.com/maps/place/faisalabad",
   description: "Fullstack Web Developer. I love building things and helping people.",
   summary:
-    "I am a tech savvy person, tinkering with my devices to customize them, root them, jailbreak them and automate them. I am in the habit of writing small, [Python based CLI apps/scripts](https://github.com/hammadxp), automating stuff with Tasker and AutoHotKey. In 2022, I wrote my first Hello World in JavaScript and have been honing my design and code skills ever since.",
+    "I am a tech savvy person, tinkering with my devices to customize them, root them, jailbreak them and automate them. I am in the habit of writing small, [Python based CLI apps/scripts](https://github.com/hammadxp) and automating stuff with Tasker and AutoHotKey. In 2022, I wrote my first Hello World in JavaScript and have been honing my web dev code and design skills ever since.",
   avatarUrl: "/me.jpg",
   skills: ["React", "Next.js", "Typescript", "Node.js", "Python", "React Native", "Postgres", "Authentication", "Hosting", "Tailwind"],
   services: [
